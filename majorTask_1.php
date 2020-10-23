@@ -18,7 +18,7 @@ function getUsernameAndPassword(){
         }    
     }
 
-    // ===== Generate the default username =====
+    // ===== Generate the default username and create new array =====
     foreach($usernames as $index => $name){
         $numberToAdd = randomNumbers(); // generate 3 random numbers
         if(strlen($name) < 6){
@@ -33,7 +33,7 @@ function getUsernameAndPassword(){
         } // if username is > 8 echo error
     }
     
-    // ===== Generate password for each header in password headers =====
+    // ===== Generate password for each header in password headers and create new array =====
     foreach($passwordHeaders as $index => $header){
         $numberToAdd = randomNumbers();
         $password = $header.$numberToAdd.$header;
